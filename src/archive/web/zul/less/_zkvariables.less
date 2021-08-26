@@ -2,20 +2,24 @@
 // -------------------------------------
 // Typography
 // -------------------------------------
+
+//@hoverGradientStart:           #fff;    //Added to fix compile bug
+//@hoverGradientEnd:             #eee;    //Added to fix compile bug
+
 @baseFontSize:                 14px;
-@baseFontFamily:               "Open Sans";
+@baseFontFamily:              'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @baseFontWeight:               400;
 @baseLineHeight:               14px;
 @baseSize:                     8px;
 
 // Component height
 @baseHeight:                   @baseSize;
-@smallIconHeight:              @baseHeight * 2; // 16px
-@iconHeight:                   @baseHeight * 3; // 24px
-@buttonHeight:                 @baseHeight * 4; // 32px
+@smallIconHeight:              @baseHeight * 2; //origin:2	// 16px
+@iconHeight:                   @baseHeight * 3; //origin:3	// 24px
+@buttonHeight:                 @baseHeight * 4; //origin:4	// 32px
 @baseButtonHeight:             @buttonHeight; // bug B70-ZK-2626.zul
-@barHeight:                    @baseHeight * 5; // 40px
-@headerHeight:                 @baseHeight * 6; // 48px
+@barHeight:                    @baseHeight * 4; //origin:5	// 40px
+@headerHeight:                 @baseHeight * 4; //origin:6	// 48px
 
 // Component width
 @baseWidth:                    @baseSize;
@@ -27,26 +31,27 @@
 
 // Component padding
 @paddingSize:                  8px;
-@paddingLarge:                 @paddingSize * 2;
-@paddingSmall:                 @paddingSize / 2;
+@paddingLarge:                 @paddingSize * 4;
+@paddingSmall:                 @paddingSize / 4;
 
 // -------------------------------------
 // Component sizing
 // -------------------------------------
 // Font Family
-@titleFontFamily:          "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@contentFontFamily:        "Open Sans", Arial, Sans-serif;
+@titleFontFamily:          'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@contentFontFamily:        'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;;
 
 // Font Size (based on 14px and 20px line-height)
-@fontSizeXLarge:               ceil(@baseFontSize * 1.25);  // 18px
-@fontSizeLarge:                floor(@baseFontSize * 1.15); // 16px
-@fontSizeMedium:               ceil(@baseFontSize * 0.85);  // 12px
-@fontSizeSmall:                floor(@baseFontSize * 0.8);  // 11px
-@fontSizeXSmall:               ceil(@baseFontSize * 0.7);   // 10px
+@fontSizeXLarge:               ceil(@baseFontSize * 1.20);  // 18px
+@fontSizeLarge:                floor(@baseFontSize * 1.10); // 16px
+@fontSizeMedium:               ceil(@baseFontSize * 0.80);  // 12px
+@fontSizeSmall:                floor(@baseFontSize * 0.7);  // 11px
+@fontSizeXSmall:               ceil(@baseFontSize * 0.6);   // 10px
+
 
 // Font Weight
 @fontWeightLight:              300;
-@fontWeightSemiBold:           600;
+@fontWeightSemiBold:           400;
 @fontWeightBold:               700;
 
 @basePopupZIndex:              88000;
@@ -54,6 +59,37 @@
 // -------------------------------------
 // Component Basic Coloring
 // -------------------------------------
+// WICS custom coloring
+@orangeWicsLighter:            #FFE1C9;
+@orangeWicsLight:              #FFCCA3;
+@orangeWicsModerate:           #FFBB85;
+@orangeWics:                   #FFA761;
+@orangeWicsDark:               #f39c12;
+@orangeWicsDarker:             #e08e0b;
+
+//Side Menu Tree 
+@treeRowBGWics:                #F4F4F4;
+@treeIconColor:                #3C8DBC;
+
+//Paging
+@lightGray:                    #777;
+
+
+
+//Tab Menu
+@tabFontSizeWicsSmall:          @baseFontSize;
+@tabSelectedIndicatorWics:      @orangeWics;
+@tabNotSelectedWics:            #F4F4F4;
+@tabNotSelectedIndicatorWics:   #C0C0C0;
+@tabHoverIndicatorWics:         @orangeWics;
+@tabFontColorSelected:          @grayDarker;
+@tabFontColorNotSelected:       @grayDrak;
+@tabColorScrollColorWics:       #C0C0C0;
+@tabColorScrollHoverWics:       #F4F4F4;
+@tabFontColorScrollHoverWics:   @orangeWics;
+
+
+
 // Basic coloring
 @white:                        #FFFFFF;
 @grayLighter:                  #F5F5F5;
@@ -72,6 +108,8 @@
 @red:                          #AE312E;
 @orange:                       #CC6D33;
 @green:                        #59A755;
+
+@black:                        #000000;
 
 // Font color
 @baseTextColor:                @grayDarker;
@@ -92,10 +130,10 @@
 // Button (used for button, combobutton, toolbarbutton)
 // -------------------------------------
 @buttonColor:                  @white;
-@buttonBorderColor:            @blueLighter;
-@buttonBackground:             @blueLighter;
-@toolbarButtonColor:           @blueLighter;
-@comboButtonBorderColor:       @blueLight;
+@buttonBorderColor:            @orangeWicsLighter;
+@buttonBackground:             @orangeWicsLighter;
+@toolbarButtonColor:           @orangeWicsLighter;
+@comboButtonBorderColor:       @orangeWicsLight;
 
 // -------------------------------------
 // Input (used for textbox, intbox, spinner, ...)
@@ -110,10 +148,10 @@
 // Mesh Table (used for grid, listbox, tree, biglistbox)
 // -------------------------------------
 @meshTitleColor:               @white;
-@meshTitleFontSize:            15px;
-@meshTitleBorderColor:         @blueDarker;
-@meshTitleBackground:          @blueDark;
-@meshMenuHoverBackground:      darken(@blueDark, 5%);
+@meshTitleFontSize:            13px;
+@meshTitleBorderColor:         @orangeWicsDarker;
+@meshTitleBackground:          @orangeWicsDark;
+@meshMenuHoverBackground:      darken(@orangeWicsDark, 5%);
 @meshStripeBackground:         @white;
 @meshFootBackground:           @grayLight;
 @meshEmptyColor:               @grayDrak;
@@ -127,20 +165,20 @@
 // -------------------------------------
 // Active
 @activeColor:                  @white;
-@activeBorderColor:            @blueLight;
-@activeBackground:             @blueLight;
-@activeShadowColor:            @blue;
+@activeBorderColor:            @orangeWicsLight;
+@activeBackground:             @orangeWicsLight;
+@activeShadowColor:            @orangeWics;
 
 // Focus
 @focusColor:                   @white;
-@focusBorderColor:             @blueModerate;
-@focusBackground:              @blueModerate;
+@focusBorderColor:             @orangeWicsModerate;
+@focusBackground:              @orangeWicsModerate;
 
 // Hover
 @hoverColor:                   @white;
-@hoverBorderColor:             #5E94B8;
-@hoverBackground:              #5E94B8;
-@hoverShadowColor:             @blueModerate;
+@hoverBorderColor:             @orangeWicsDark;
+@hoverBackground:              @orangeWics;
+@hoverShadowColor:             @orangeWicsModerate;
 
 // Disabled
 @disabledColor:                @grayDrak;
@@ -170,12 +208,12 @@
 // Selected Hover (used on listbox, tree, comboitem)
 @selectedHoverColor:           @white;
 @selectedHoverBorderColor:     @baseBorderColor;
-@selectedHoverBackground:      @blueLighter;
+@selectedHoverBackground:      @orangeWicsLighter;
 
 // Checked (used on menuitem, listbox, tree, toolbarbutton)
-@checkedSize:                  20px;
-@checkedFontSize:              14px;
-@checkedColor:                 @blueLighter;
+@checkedSize:                  18px;
+@checkedFontSize:              12px;
+@checkedColor:                 @orangeWicsLighter;
 @checkedBorderColor:           @gray;
 @checkedBackground:            @white;
 
@@ -187,23 +225,27 @@
 @loadingColor:                 @grayDrak;
 @loadingFontSize:              24px;
 @loadingBackground:            @white;
+@loadingbarHeight:             6px;
+@loadingbarColor:              @orangeWicsLighter;
+@loadingbarSecondaryColor:     @orangeWicsLighter;
+@loadingbarHeight:             6px;
 
 // scrollbar
 @scrollbarWidth:                 16px;
 @scrollbarHeight:                16px;
 @scrollbarBorderColor:           @white;
-@scrollbarBackground:            @blueLighter;
+@scrollbarBackground:            @orangeWicsLighter;
 @scrollbarRailBackground:        @white;
 @scrollbarButtonBackground:      @white;
-@scrollbarButtonHoverBackground: @blueLighter;
-@scrollbarButtonColor:           @blueLighter;
+@scrollbarButtonHoverBackground: @orangeWicsLighter;
+@scrollbarButtonColor:           @orangeWicsLighter;
 @scrollbarButtonHoverColor:      @white;
 @scrollbarIconDisplay:           none;
 
 // drag and drop
 @dragColor:                    @white;
 @dragBackground:               @grayDrak;
-@dragHoverBackground:          @blueLighter;
+@dragHoverBackground:          @orangeWicsLighter;
 @dragAllowBackground:          @green;
 @dragDisAllowBackground:       @orange;
 
@@ -213,10 +255,10 @@
 
 // calendar
 @calendarTitleColor:           @white;
-@calendarTitleBorderColor:     @blue;
-@calendarTitleBackground:      @blueDark;
-@calendarTitleHoverBackground: @blueDarker;
-@calendarSelectedColor:        @blueLighter;
+@calendarTitleBorderColor:     @orangeWics;
+@calendarTitleBackground:      @orangeWicsDark;
+@calendarTitleHoverBackground: @orangeWicsDarker;
+@calendarSelectedColor:        @orangeWicsLighter;
 @calendarSelectedBackground:   @white;
 @calendarWeekBackground:       @grayLight;
 @calendarWeekendColor:         @grayDarker;
@@ -228,7 +270,7 @@
 
 // popup
 @popupColor:                   @white;
-@popupBackground:              @blueLighter;
+@popupBackground:              @orangeWicsLighter;
 
 // group (groupbox, group, listgroup)
 @groupBorderColor:             @white;
@@ -237,10 +279,10 @@
 
 // paging
 @pagingColor:                  @grayDarker;
-@pagingIconColor:              @blueLighter;
-@pagingHoverColor:             @white;
+@pagingIconColor:              @lightGray;
+@pagingHoverColor:             @gray;
 @pagingActiveColor:            @white;
-@pagingSelectedColor:          @blueLighter;
+@pagingSelectedColor:          @gray;
 @pagingBorderColor:            transparent;
 @pagingSelectedBorderColor:    transparent;
 @pagingBackground:             @grayLight;
@@ -249,8 +291,8 @@
 
 // slider
 @sliderBackground:             @grayDrak;
-@sliderButtonBackground:       @blueModerate;
-@sliderAreaBackgroundColor:    @blueModerate;
+@sliderButtonBackground:       @orangeWicsModerate;
+@sliderAreaBackgroundColor:    @orangeWicsModerate;
 @sliderBackgroundColor:        @gray;
 
 // errorbox (input constraint)
@@ -266,7 +308,7 @@
 @notificationArrowColor:       rgb(51, 51, 51);
 
 // progressmeter
-@progressmeterBackground:      @blueLighter;
+@progressmeterBackground:      @orangeWicsLighter;
 
 // loadingbar
 @loadingbarColor:              @blueLighter;
@@ -274,7 +316,7 @@
 @loadingbarHeight:             6px;
 
 // window
-@windowTitleFontSize:          24px;
+@windowTitleFontSize:          20px;
 @windowTitleColor:             @grayDrak;
 @windowBorderColor:            @gray;
 @windowBackground:             @white;
@@ -287,43 +329,43 @@
 @messageboxIconSize:           32px;
 
 // panel
-@panelTitleFontSize:           24px;
+@panelTitleFontSize:           20px;
 @panelTitleColor:              @grayDrak;
 
 // menu
 @menuImageSize:                16px;
 @menuColor:                    @white;
-@menuBackground:               @blueLighter;
-@menuHoverColor:               @blueLighter;
+@menuBackground:               @orangeWicsLighter;
+@menuHoverColor:               @orangeWicsLighter;
 @menuHoverBackground:          @white;
-@menuActiveColor:              @blueLighter;
+@menuActiveColor:              @orangeWicsLighter;
 @menuActiveBackground:         @white;
 @menuDisabledColor:            @grayDrak;
 @menuSeparatorBorderColor:     @white;
-@menuSeparatorBackground:      @blueLighter;
+@menuSeparatorBackground:      @orangeWicsLighter;
 
 @menuPopupColor:               @grayDrak;
 @menuPopupBackground:          @white;
 @menuPopupHoverColor:          @white;
-@menuPopupHoverBackground:     @blueLighter;
+@menuPopupHoverBackground:     @orangeWicsLighter;
 @menuPopupActiveColor:         @white;
-@menuPopupActiveBackground:    @blueLighter;
+@menuPopupActiveBackground:    @orangeWicsLighter;
 @menuPopupSeparatorBorder:     @white;
 @menuPopupSeparatorBackground: @white;
 
 // navbar
-@navImageSize:                 20px;
+@navImageSize:                 16px;
 @navColor:                     @white;
 @navBorderColor:               transparent;
-@navBackground:                @blueLighter; //first level, each level is 5.6% darker (darken(@navBackground, 5.6 * level))
-@navHoverColor:                @blueLighter;
+@navBackground:                @orangeWicsLighter; //first level, each level is 5.6% darker (darken(@navBackground, 5.6 * level))
+@navHoverColor:                @orangeWicsLighter;
 @navHoverBackground:           @white;
-@navSelectedColor:             @blueLighter;
+@navSelectedColor:             @orangeWicsLighter;
 @navSelectedBackground:        @white;
-@navSelectedHoverColor:        @blueLighter;
+@navSelectedHoverColor:        @orangeWicsLighter;
 @navSelectedHoverBackground:   @white;
-@navInfoBackground:            @blueModerate;
-@navSeparatorBackground:       @blueLight;
+@navInfoBackground:            @orangeWicsModerate;
+@navSeparatorBackground:       @orangeWicsLight;
 @navCollapsedWidth:            40px;
 
 // biglistbox
@@ -332,23 +374,23 @@
 
 // chosenbox
 @chosenboxColor:               @white;
-@chosenboxBackground:          @blueLighter;
-@chosenboxHoverColor:          @blueLighter;
+@chosenboxBackground:          @orangeWicsLighter;
+@chosenboxHoverColor:          @orangeWicsLighter;
 @chosenboxHoverBackground:     @white;
 @chosenboxCreateColor:         @green;
 
 // tabbox
-@tabFontSize:                  16px;
-@tabColor:                     @white;
-@tabHoverColor:                @blueLighter;
-@tabSelectedColor:             @blueLighter;
+@tabFontSize:                  @tabFontSizeWicsSmall;
+@tabColor:                     @tabNotSelectedWics;
+@tabHoverColor:                @tabHoverIndicatorWics;//@orangeWicsLighter;
+@tabIconHoverColor:            @grayLight;
+@tabSelectedColor:             @orangeWics;
 @tabDisabledColor:             @white;
-@tabBackground:                @blueLighter;
-@tabHoverBackground:           @blueLight;
+@tabBackground:                @tabNotSelectedWics; //@orangeWicsLighter;
+@tabHoverBackground:           @tabNotSelectedWics;//@orangeWicsLight;
 @tabDisabledBackground:        @grayDrak;
 @accordionSelectedColor:       @white;
-@accordionSelectedBackground:  @blueLighter;
-
+@accordionSelectedBackground:  @orangeWicsLighter;
 // organigram
 @organigramLine: 1px solid #9B9B9B;
 @orgnodeColor: #FFFFFF;

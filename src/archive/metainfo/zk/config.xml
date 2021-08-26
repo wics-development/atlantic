@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <config>
-	<config-name>atlantic</config-name><!-- used to resolve dependency -->
+	<config-name>wicstheme</config-name><!-- used to resolve dependency -->
 	<depends>zul</depends>
 	<version>
-		<version-class>org.zkoss.theme.atlantic.Version</version-class>
-		<version-uid>9.6.0</version-uid>
+		<version-class>org.zkoss.theme.wicstheme.Version</version-class>
+		<version-uid>9.6.2</version-uid>
 	</version>
 
 	<listener>
-		<listener-class>org.zkoss.theme.atlantic.AtlanticThemeWebAppInit</listener-class>
+		<listener-class>org.zkoss.theme.wicstheme.WicsThemeWebAppInit</listener-class>
 	</listener>
 </config>

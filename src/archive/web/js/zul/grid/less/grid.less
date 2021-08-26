@@ -67,11 +67,14 @@
 	// ZK-3138: ROD loading indicator
 	&-loading {
 		background: transparent no-repeat center;
-		.encodeThemeURL(background-image, '~./zul/img/misc/progress-large.gif');
+		.encodeThemeURL(background-image, '~./zul/img/misc/progress-custom.gif');
 	}
 }
 //column
 .z-columns {
+	&:first-child th {
+		border-top-width: 0;
+	}
 	th:first-child {
 		border-left-width: 0;
 

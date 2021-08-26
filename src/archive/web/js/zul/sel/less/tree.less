@@ -62,7 +62,7 @@
 	// ZK-3138: ROD loading indicator
 	&-loading {
 		background: transparent no-repeat center;
-		.encodeThemeURL(background-image, '~./zul/img/misc/progress-large.gif');
+		.encodeThemeURL(background-image, '~./zul/img/misc/progress-custom.gif');
 	}
 	//tree open icon and indent space
 	&-icon,
@@ -71,7 +71,7 @@
 		vertical-align: middle;
 	}
 	&-icon {
-		.iconFontStyle(@baseFontSize, @baseTextColor);
+		.iconFontStyle(@baseFontSize, @treeIconColor);
 		text-align: center;
 		position: relative;
 		cursor: pointer;
@@ -140,7 +140,7 @@
 // ZK-2151: use strict selector to prevent nest problem
 //tree row and cell
 .z-treerow {
-	background: #FFFFFF;
+	background: @treeRowBGWics;
 	//tree cell
 	.z-treecell {
 		overflow: hidden;

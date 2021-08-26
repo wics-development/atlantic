@@ -13,10 +13,10 @@
 	position: relative;
 	overflow: hidden;
 	&-icon {
-		.iconFontStyle(@fontSizeMedium, @tabColor);
+		.iconFontStyle(@tabFontSize, @tabColorScrollColorWics);
 		display: none;
 		min-height: @headerHeight;
-		border: 1px solid @baseBorderColor;
+		//border: 1px solid @baseBorderColor;
 		line-height: @headerHeight - 2;
 		background: @tabBackground;
 		text-align: center;
@@ -26,7 +26,8 @@
 		z-index: 25;
 		.userSelectNone();
 		&:hover {
-			background: @tabHoverBackground;
+			background: @tabColorScrollHoverWics;	
+			.iconFontStyle(@tabFontSize, @tabFontColorScrollHoverWics);
 		}
 	}
 	&-left-scroll,
@@ -48,8 +49,8 @@
 	&-top {
 		> .z-tabs {
 			.z-tabs-content {
-				border-bottom: 1px solid @baseBorderColor;
-				white-space: nowrap;
+				//border-right: 1px solid @white;
+				
 			}
 
 			.z-tab {
@@ -58,9 +59,14 @@
 				padding-bottom: @paddingSize;
 				float: none;
 				vertical-align: bottom;
+				border-top: 5px solid @tabNotSelectedIndicatorWics;
+				margin-left: 2px;
+				///border-right: 1px solid @white;
+				
 				
 				&.z-tab-selected {
 					.boxShadow(0 1px 0 #FFFFFF);
+					border-top: 5px solid @tabSelectedIndicatorWics;
 				}
 			}
 		}
@@ -70,7 +76,7 @@
 			padding-top: @paddingSmall;
 		}
 		> .z-toolbar-tabs {
-			border-width: 0 0 1px 0;
+			border-width: 0 0 0px 0;
 			padding: @paddingSize @paddingSize @paddingSize - 1;
 		}
 	}
@@ -275,7 +281,7 @@
 
 .z-tab {
 	display: block;
-	border: 1px solid @baseBorderColor;
+	//border-right: 1px solid @white;
 	padding: @paddingSize - 1;
 	line-height: @headerHeight - @paddingSize * 2;
 	background: @tabBackground;
@@ -293,7 +299,7 @@
 	}
 
 	&-text {
-		.fontStyle(@titleFontFamily, @fontSizeLarge, @baseFontWeight, @tabColor);
+		.fontStyle(@titleFontFamily, @tabFontSizeWicsSmall, @baseFontWeight, @tabFontColorNotSelected);
 		display: block;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -305,7 +311,7 @@
 	}
 
 	&-button {
-		.iconFontStyle(@baseFontSize, @tabColor);
+		.iconFontStyle(@baseFontSize, @tabNotSelectedIndicatorWics);
 		.size(@iconWidth, @iconHeight);
 		margin-top: -@iconHeight / 2;
 		line-height: @iconHeight;
@@ -319,8 +325,8 @@
 		.userSelectNone();
 
 		&:hover {
-			color: @tabHoverColor;
-			background: @baseBackground;
+			color: @white;
+			background: @tabNotSelectedIndicatorWics;
 		}
 		& + .z-tab-text {
 			margin-right: @iconWidth + @paddingSize;
@@ -379,7 +385,7 @@
 }
 
 .z-tabpanel {
-	border: 1px solid @baseBorderColor;
+	//border: 1px solid @baseBorderColor;
 	padding: @paddingSmall - 1;
 	background: @baseBackground;
 }

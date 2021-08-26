@@ -1,10 +1,10 @@
 <language-addon>
-	<addon-name>atlantic</addon-name>
+	<addon-name>wicstheme</addon-name>
 	<depends>zul</depends>
 	<language-name>xul/html</language-name>
 
 	<version>
-		<version-class>org.zkoss.theme.atlantic.Version</version-class>
-		<version-uid>9.6.0</version-uid>
+		<version-class>org.zkoss.theme.wicstheme.Version</version-class>
+		<version-uid>9.6.2</version-uid>
 	</version>
 </language-addon>

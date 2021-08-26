@@ -1,6 +1,9 @@
 @import "~./zul/less/_header.less";
 @import "~./zul/less/_reset.less";
 
+// Font-Awesome 3.1.1
+@import "~./zul/less/font/_all.less";
+
 html, body {
 	height: 100%;
 }
@@ -193,15 +196,15 @@ input[type="checkbox"] {
 	z-index: 31000;
 
 	&-indicator {
-		padding: 6px;
-		text-transform: uppercase;
+		padding: 24px 16px;
+		text-align: center;
 		white-space: nowrap;
 	}
 	&-icon {
-		.displaySize(block, 48px, 48px);
+		.displaySize(block, 65px, 65px);
 		margin-left: -24px;
 		background: transparent no-repeat center;
-		.encodeThemeURL(background-image, '~./zul/img/misc/progress-large.gif');
+		.encodeThemeURL(background-image, '~./zul/img/misc/progress-72.gif');
 		position: relative;
 		left: 50%;
 	}
@@ -224,7 +227,7 @@ input[type="checkbox"] {
 .z-renderdefer {
 	.size(16px, 16px);
 	background: transparent no-repeat center;
-	.encodeThemeURL(background-image, '~./zul/img/misc/progress.gif');
+	.encodeThemeURL(background-image, '~./zul/img/misc/progress-72.gif');
 }
 .z-temp,
 .z-modal-mask,
