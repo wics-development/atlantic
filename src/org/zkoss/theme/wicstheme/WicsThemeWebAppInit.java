@@ -14,10 +14,8 @@ public class WicsThemeWebAppInit implements WebAppInit {
 
 	public void init(WebApp wapp) throws Exception {
 		Themes.register(wicstheme_NAME, wicstheme_DISPLAY, wicstheme_PRIORITY);
-		String edition = WebApps.getEdition();
-		if ("EE".equals(edition)) {
+		if ("EE".equals(WebApps.getEdition())) {
 			Themes.register(ResponsiveThemeRegistry.TABLET_PREFIX + wicstheme_NAME, wicstheme_DISPLAY, wicstheme_PRIORITY);
 		}
 	}
-
 }
