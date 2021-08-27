@@ -6,3 +6,5 @@ target
 *.dsp.src
 test
 node_modules
+.idea/
+*.iml
