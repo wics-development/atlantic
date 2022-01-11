@@ -154,6 +154,25 @@
 .z-notification-error .z-notification-close:hover {
 	color: @notificationErrorColor;
 }
+
+.z-notification .z-notification-content {
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: white;
+    color: rgba(0,0,0,0.9);
+    box-shadow: 0 0 16px rgb(0 0 0 / 16%);
+}
+
+.z-notification .z-notification-content::after {
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     bottom: 0;
+     width: 5px;
+}
+
 .z-notification-info  { color: #59A755; }
 .z-notification-info .z-notification-content::after { background-color: #59A755; }
 
@@ -162,6 +181,8 @@
 
 .z-notification-error { color: #AE312E; }
 .z-notification-error .z-notification-content::after { background-color: #AE312E; }
+
+
 
 // Toast
 .z-toast {
